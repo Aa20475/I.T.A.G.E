@@ -1,0 +1,8 @@
+- Add spritecomponent and AnimatedSprite maybe?
+- Change the structure of code and add all the components into a single folder
+- Add a build system like scons or paver? Need help.
+- Adding sound system to this. 
+
+
+Long Term:
+- Making GUI based Scene builder.
