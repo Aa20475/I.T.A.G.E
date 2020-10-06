@@ -1,5 +1,5 @@
 import pygame as pg
-
+import mainmenu as mm
 import screenmanager as sm
 import eventhandler as eh
 
@@ -14,6 +14,9 @@ clock = pg.time.Clock()
 crash = False
 
 screenmanager = sm.ScreenManager(gameDisp)
+
+screenmanager.screens.append(mm.MainMenuScreen(gameDisp))
+
 eventhandler = eh.EventHandler(screenmanager)
 
 while not crash:

@@ -26,9 +26,13 @@ class HoverBox(Box):
 	def render(self):
 		pg.draw.rect(self.disp,self.color,self.dims)
 
-	def hover(self,event):
-		if self.dims.collidepoint(pg.mouse.get_pos()):
+	def changecolor(self,b):
+		if b:
 			self.color = self.hovercolor
 		else:
 			self.color = self.idlecolor
+
+
+	def hover(self,event):
+		self.changecolor(self.dims.collidepoint(pg.mouse.get_pos()))
 			

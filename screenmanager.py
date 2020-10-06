@@ -6,7 +6,10 @@ class ScreenManager(object):
 
 	def __init__(self, disp):
 		self.disp = disp
-		self.screen = mm.MainMenuScreen(disp)
+		self.screens = []
 
 	def render(self) -> sc.Screen:
-		self.screen = self.screen.draw()
+		screen  = self.screens.pop()
+		screen.draw()
+		self.screens.append(screen)
+

@@ -39,8 +39,13 @@ class HoverText(cp.Component):
 		else:
 			return False
 
-	def hover(self,event):
-		if self.hovercheck():
+	def changecolor(self,b):
+		if b:
 			self.color = self.hovercolor
 		else:
 			self.color = self.idlecolor
+
+
+
+	def hover(self,event):
+		self.changecolor(self.hovercheck())

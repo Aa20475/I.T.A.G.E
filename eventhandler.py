@@ -11,4 +11,10 @@ class EventHandler(object):
 			if event.type ==pg.QUIT:
 				return True
 
-			self.screenmanager.screen.actioncontainer.process(event)
+			screen  = self.screenmanager.screens.pop()
+			result = screen.actioncontainer.process(event)
+			self.screenmanager.screens.append(screen)
+
+			if result is not None:
+				self.screenmanager.screens.append(result)
+

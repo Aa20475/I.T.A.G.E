@@ -3,5 +3,7 @@ class ActionContainer(object):
 		self.actions = []
 
 	def process(self,event):
+		screen = None
 		for action in self.actions:
-			action(event); 
+			screen= action(event)
+		return screen
