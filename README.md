@@ -1,6 +1,8 @@
 # I.T.A.G.E
 **Is This A Game Engine?**
 
+![I.T.A.G.E](https://i.ibb.co/5hFV4qw/u.png)
+
 Join me on this quest to make a decent game engine. 
 
 This is still a very crude idea.
